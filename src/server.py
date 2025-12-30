@@ -19,9 +19,9 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan, title="Todo App Service",
-              swagger_favicon_url="/static/favicon.webp", version="1.0.0")
+              swagger_favicon_url="/favicon.webp", version="1.0.0")
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
+# app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.include_router(tr.router)
 
