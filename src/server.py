@@ -13,7 +13,7 @@ async def lifespan(app: FastAPI):
         print(app)
         create_db_and_tables()
         print("Database started successfully !")
-    except Exception as e:
+    except e:
         print(f"[DATABASE_INIT_ERROR]: {e}")
     yield
 
